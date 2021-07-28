@@ -20,7 +20,8 @@ public class AutorModel {
 	private String nombre;
 	private String apellido;
 	private String nacionalidad;
-	
+	private Boolean activo;
+
 	@OneToMany(mappedBy = "autor")
 	@JsonBackReference
 	private List<LibroModel> libroModel;
@@ -55,6 +56,14 @@ public class AutorModel {
 
 	public void setNacionalidad(String nacionalidad) {
 		this.nacionalidad = nacionalidad;
+	}
+	
+	public Boolean getActivo() {
+		return activo;
+	}
+
+	public void setActivo(Boolean activo) {
+		this.activo = activo;
 	}
 
 	public List<LibroModel> getLibroModel() {

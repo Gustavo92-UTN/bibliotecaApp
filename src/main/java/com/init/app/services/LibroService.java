@@ -34,6 +34,6 @@ public class LibroService {
 			libroRepository.save(libro.get());
 			return "Libro borrado";
 		}
-		return "No se encontro el libro en la base de datos";
+		return "ERROR. No se encontro el libro en la base de datos";
 	}
 }
